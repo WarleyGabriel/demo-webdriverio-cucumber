@@ -1,0 +1,13 @@
+### IntelliJ ###
+.idea/
+
+### Logs ###
+error-shots/
+allure-results/
+allure-report/
+
+### Node ###
+node_modules/
+
+### MACOS ###
+.DS_Store

@@ -1,0 +1,45 @@
+{
+  "name": "demo-webdriverio-cucumber",
+  "version": "0.0.1",
+  "description": "DEMO Integration Tests with WebdriverIO and Cucumber",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:WarleyGabriel/demo-webdriverio-cucumber.git"
+  },
+  "license": "ISC",
+  "author": "Warley Gabriel da Paixão",
+  "main": "index.js",
+  "scripts": {
+    "check": "eslint \"test/**/*.js\" \"wdio.conf.js\"",
+    "e2e:tests": "wdio wdio.conf.js",
+    "format": "yarn run check -- --fix --quiet",
+    "report": "allure generate --clean ./allure-results -o ./allure-report"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/register": "^7.4.4",
+    "@types/cucumber": "^4.0.5",
+    "@wdio/cli": "^5.11.0",
+    "cucumber": "^5.1.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "fibers": "^4.0.1",
+    "webdriverio": "^5.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.12",
+    "@wdio/allure-reporter": "^5.11.0",
+    "@wdio/cucumber-framework": "^5.11.0",
+    "@wdio/dot-reporter": "^5.11.0",
+    "@wdio/local-runner": "^5.11.0",
+    "@wdio/spec-reporter": "^5.11.0",
+    "@wdio/sync": "^5.11.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.0",
+    "npm-run-all": "^4.1.5"
+  }
+}
