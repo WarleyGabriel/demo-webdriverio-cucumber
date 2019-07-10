@@ -10,6 +10,6 @@ When(/^I send a message with a document$/, () => {
   contact.sendMessage(content);
 });
 
-Then(/^System shows a successfully message$/, () => {
+Then(/^The system shows a successful message$/, () => {
   contact.checkMessageSentSuccessfully();
 });

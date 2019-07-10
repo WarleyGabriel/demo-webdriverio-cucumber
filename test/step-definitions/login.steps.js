@@ -2,7 +2,7 @@ import { Given, When, Then } from 'cucumber';
 import { login } from '../pages/login.page';
 import { context } from '../data/context';
 
-Given(/^Show the login screen successfully$/, () => {
+Given(/^I'm on the login page$/, () => {
   login.open();
 });
 
