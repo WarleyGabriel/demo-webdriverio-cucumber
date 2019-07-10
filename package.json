@@ -1,7 +1,7 @@
 {
   "name": "demo-webdriverio-cucumber",
   "version": "0.0.1",
-  "description": "DEMO Integration Tests with WebdriverIO and Cucumber",
+  "description": "Demo Integration Tests with WebdriverIO and Cucumber",
   "repository": {
     "type": "git",
     "url": "git@github.com:WarleyGabriel/demo-webdriverio-cucumber.git"
