@@ -23,18 +23,18 @@ Run e2e tests:
 yarn run e2e:tests
 ```
 
-#### Allure Reports
+#### Allure Report
 
 ![alt text](https://github.com/WarleyGabriel/demo-webdriverio-cucumber/blob/master/images/allure-report.png)
 
 If you don't have allure command line installed on your machine yet, follow the instructions [here](https://github.com/allure-framework/allure-docs/blob/master/docs/reporting/commandline.adoc).
 
-Run report:
+After installing, run this command to generate the report:
 ```
 yarn run report
 ```
 
-If you have allure command line in your machine, you can run this command to open the report:
+You can run this command to start a server and open the report:
 ```
 allure open allure-report
 ```
