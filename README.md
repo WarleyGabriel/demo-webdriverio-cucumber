@@ -16,14 +16,18 @@ Install the dependencies:
 yarn install
 ```
 
-In wdio.conf.js file configure the host of the Selenium Server `hostname` <br/>
+In wdio.conf.js file configure the host of the Selenium Server `hostname` (default: localhost). <br/>
+
+If you don't want to start a Selenium Server, you can use Selenium Standalone from wdio (if you have JDK installed). <br/>
+So, you should uncomment the line 58 on `wdio.conf.js`. <br/>
+Then the tests run on your machine without a docker selenium.
 
 Run e2e tests:
 ```
 yarn run e2e:tests
 ```
 
-#### Allure Report
+#### Reports
 
 ![alt text](https://github.com/WarleyGabriel/demo-webdriverio-cucumber/blob/master/images/allure-report.png)
 
@@ -36,10 +40,12 @@ yarn run report
 
 You can run this command to start a server and open the report:
 ```
-allure open allure-report
+allure open test-report/allure-report
 ```
 
-#### Eslint
+Also, you can see [Timeline report](https://github.com/QualityOps/wdio-timeline-reporter) in `./test-report/timeline`
+
+#### Eslint and Prettier
 
 Run check lint:
 ```

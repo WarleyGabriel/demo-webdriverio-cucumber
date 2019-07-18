@@ -5,4 +5,5 @@ Feature: Performing a login
 
     Scenario: Login with a default user
         When I log in with a default user
-        Then Show a welcome message and user name on site
+        Then show a welcome message on the site
+        And show user name 'Leandro Nelson Gael Castro' on the site
