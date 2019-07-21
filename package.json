@@ -10,9 +10,11 @@
   "author": "Warley Gabriel da Paixão",
   "main": "index.js",
   "scripts": {
-    "check": "prettier --check \"test/**/*.js\" \"wdio.conf.js\"",
+    "check": "yarn run lint && yarn run prettier",
     "e2e:tests": "wdio wdio.conf.js",
-    "format": "yarn run check --write",
+    "format": "yarn run lint --fix --quiet && yarn run prettier --write",
+    "lint": "eslint .",
+    "prettier": "prettier --check \"**/*.js*\"",
     "report": "allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report"
   },
   "dependencies": {
@@ -39,6 +41,7 @@
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.18.0",
     "fibers": "^4.0.1",
+    "husky": "^3.0.1",
     "prettier": "^1.18.2",
     "wdio-timeline-reporter": "^5.0.10",
     "webdriverio": "^5.11.0"
