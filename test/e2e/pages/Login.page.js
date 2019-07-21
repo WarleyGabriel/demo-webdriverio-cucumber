@@ -1,4 +1,4 @@
-class Login {
+class LoginPage {
     open() {
         browser.url('/');
     }
@@ -39,4 +39,4 @@ class Login {
     }
 }
 
-export const login = new Login();
+export const loginPage = new LoginPage();
