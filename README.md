@@ -27,6 +27,11 @@ Run e2e tests:
 yarn run e2e:tests
 ```
 
+#### Spoken Languages
+
+If you want to use another language in features files, you can see this [doc](https://cucumber.io/docs/gherkin/reference/#spoken-languages) about how can you do that. <br/>
+In the directory `./test/e2e/featuresInPortuguese/` there are features with the keywords in Portuguese.
+
 #### Reports
 
 ![alt text](https://github.com/WarleyGabriel/demo-webdriverio-cucumber/blob/master/images/allure-report.png)
