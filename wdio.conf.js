@@ -17,6 +17,7 @@ exports.config = {
         },
     ],
     logLevel: 'trace',
+    outputDir: './test-report/output',
     bail: 0,
     baseUrl: 'http://automationpractice.com',
     waitforTimeout: 10000,
