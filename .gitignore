@@ -9,3 +9,6 @@ node_modules/
 
 ### MACOS ###
 .DS_Store
+
+### Zalenium ###
+videos/
