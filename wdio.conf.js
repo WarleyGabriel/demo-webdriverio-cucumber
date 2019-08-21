@@ -38,6 +38,7 @@ exports.config = {
         ['timeline', { outputDir: './test-report/timeline' }],
     ],
     cucumberOpts: {
+        requireModule: ['@babel/register'],
         require: ['./test/e2e/steps/*.steps.js'],
         backtrace: false,
         compiler: [],
@@ -60,8 +61,5 @@ exports.config = {
     ],
     before() {
         browser.setWindowSize(1920, 1080);
-    },
-    beforeSession: function beforeTest() {
-        require('@babel/register');
     },
 };
