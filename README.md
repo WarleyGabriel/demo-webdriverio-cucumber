@@ -19,7 +19,7 @@ npm install
 Run e2e tests:
 
 ```bash
-yarn tests:e2e
+npm run tests:e2e
 ```
 
 ## Spoken Languages
@@ -33,13 +33,13 @@ If you want to use another language in features files, you can see this [doc](ht
 Run this command to generate the allure report in the directory `./test-report/allure-report`:
 
 ```bash
-yarn report:generate
+npm run report:generate
 ```
 
 You can run this command to start a server on your machine and open the allure report on the browser:
 
 ```bash
-yarn report:open
+npm run report:open
 ```
 
 ### Time line reporter
@@ -51,5 +51,13 @@ You can see [Timeline report](https://github.com/QualityOps/wdio-timeline-report
 Run to format the code:
 
 ```bash
-yarn code:format
+npm run code:format
+```
+
+## Gherkin lint
+
+We use [Gherkin lint](https://github.com/vsiakka/gherkin-lint) to keep the feature files organized.
+
+```bash
+npm run code:gherkin
 ```

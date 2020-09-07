@@ -9,6 +9,7 @@
   "scripts": {
     "build": "rm -rf ./dist && npx tsc && cp -R ./src/test/e2e/features ./dist/src/test/e2e",
     "code:format": "prettier --check \"src/**/*.ts*\" --write",
+    "code:gherkin": "npx gherkin-lint -c .gherkin-lintrc.json src/test/e2e/features",
     "report:generate": "npx allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
     "report:open": "npx allure open test-report/allure-report",
     "tests:e2e": "wdio ./dist/wdio.conf.js"
@@ -35,6 +36,7 @@
     "@types/node": "^14.6.4",
     "husky": "^4.3.0",
     "prettier": "^2.1.1",
+    "gherkin-lint": "^4.1.2",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
   }
