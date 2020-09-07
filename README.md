@@ -1,5 +1,7 @@
 # Demo WebDriverIO with Cucumber
 
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
 **Demo WebDriverIO** is a demonstration project of integration tests. In this project the user sends a message to the customer service on [Automation Practice](http://automationpractice.com).  
 These tests are developed in TypeScript with [WebDriverIO V6](http://webdriver.io/) and [Cucumber](https://cucumber.io/)
 
@@ -75,3 +77,8 @@ npm run cucumber:undefined:step
 ```bash
 npm run cucumber:unused:step
 ```
+
+## Commit
+
+We use the best practices for message's commit, using [Commit lint](https://github.com/conventional-changelog/commitlint) and [Commitizen](https://github.com/commitizen/cz-cli#making-your-repo-commitizen-friendly) we can generate changelogs automatically.
+Run `npm run commit` and commitizen will help you.

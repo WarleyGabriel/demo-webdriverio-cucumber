@@ -1,20 +1,26 @@
 {
   "name": "demo-webdriverio-cucumber",
-  "author": "Warley Gabriel da Paixão",
   "version": "0.0.1",
   "repository": {
     "type": "git",
     "url": "git@github.com:WarleyGabriel/demo-webdriverio-cucumber.git"
   },
+  "author": "Warley Gabriel da Paixão",
   "scripts": {
     "build": "rm -rf ./dist && npx tsc && cp -R ./src/test/e2e/features ./dist/src/test/e2e",
     "code:format": "prettier --check \"src/**/*.ts*\" --write",
     "code:gherkin": "npx gherkin-lint -c .gherkin-lintrc.json src/test/e2e/features",
+    "commit": "cz",
     "cucumber:undefined:step": "npx cucumber-js --dry-run --require './dist/src/**/steps/*.js' ./dist/src/test/e2e/features --format summary",
     "cucumber:unused:step": "npx ./dist/src/test/e2e/config/CucumberStepManager.js",
     "report:generate": "npx allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
     "report:open": "npx allure open test-report/allure-report",
     "tests:e2e": "wdio ./dist/wdio.conf.js"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "@wdio/allure-reporter": "^6.4.6",
@@ -34,11 +40,14 @@
     "webdriverio": "^6.4.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
     "@types/cucumber": "^6.0.1",
     "@types/node": "^14.6.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "gherkin-lint": "^4.1.2",
     "husky": "^4.3.0",
     "prettier": "^2.1.1",
-    "gherkin-lint": "^4.1.2",
     "ts-node": "^9.0.0",
     "typescript": "^4.0.2"
   }
