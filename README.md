@@ -61,3 +61,17 @@ We use [Gherkin lint](https://github.com/vsiakka/gherkin-lint) to keep the featu
 ```bash
 npm run code:gherkin
 ```
+
+Also, we have more two interesting hooks;
+
+-   The first one checks if there is any step on feature files, and this step was not defined on step files:
+
+```bash
+npm run cucumber:undefined:step
+```
+
+-   The second one checks if there is any step on steps files, and this step was not being used on feature files:
+
+```bash
+npm run cucumber:unused:step
+```
