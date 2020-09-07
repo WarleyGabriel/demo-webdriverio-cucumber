@@ -81,4 +81,5 @@ npm run cucumber:unused:step
 ## Commit
 
 We use the best practices for message's commit, using [Commit lint](https://github.com/conventional-changelog/commitlint) and [Commitizen](https://github.com/commitizen/cz-cli#making-your-repo-commitizen-friendly) we can generate changelogs automatically.
+
 Run `npm run commit` and commitizen will help you.
