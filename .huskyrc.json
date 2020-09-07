@@ -1,5 +1,5 @@
 {
   "hooks": {
-    "pre-commit": "yarn code:check"
+    "pre-commit": "npm run code:format && npm run build"
   }
 }

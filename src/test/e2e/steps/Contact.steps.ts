@@ -1,4 +1,3 @@
-import { assert } from 'chai';
 import { When, Then } from 'cucumber';
 import { contactPage } from '../pages/Contact.page';
 import * as systemMessages from '../constants/SystemMessages.constant';
@@ -9,21 +8,23 @@ When(/^I'm on the contact page$/, () => {
 });
 
 Then(/^the system shows a customer service label$/, () => {
-    assert.equal(contactPage.heading.getText(), systemLabels.CUSTOMER_SERVICE);
+    expect(contactPage.heading).toHaveText(systemLabels.CUSTOMER_SERVICE);
 });
 
 When(/^I send a message with a document$/, () => {
     const content = {
-        subject: 2,
+        subject: '2',
         message: 'My first test.',
-        file: 'test.pdf',
+        file: 'file.pdf',
     };
     contactPage.sendMessage(content);
+
+    // This sleep is unnecessary for the test, it's only to see the result (on-screen)
+    browser.pause(5000);
 });
 
 Then(/^the system shows a successful message$/, () => {
-    assert.equal(
-        contactPage.successMessage.getText(),
+    expect(contactPage.successMessage).toHaveText(
         systemMessages.FEEDBACK_MESSAGE_SENT,
     );
 });

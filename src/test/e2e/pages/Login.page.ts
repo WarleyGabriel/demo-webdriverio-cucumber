@@ -27,7 +27,7 @@ class LoginPage {
         return $('.info-account');
     }
 
-    login(user) {
+    login(user: { login: string; password: string }) {
         if (this.buttonLogin.isExisting()) {
             this.buttonLogin.click();
             this.inputEmail.waitForEnabled();
