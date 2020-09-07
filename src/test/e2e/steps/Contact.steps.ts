@@ -7,10 +7,6 @@ When(/^I'm on the contact page$/, () => {
     contactPage.goToContactPage();
 });
 
-Then(/^the system shows a customer service label$/, () => {
-    expect(contactPage.heading).toHaveText(systemLabels.CUSTOMER_SERVICE);
-});
-
 When(/^I send a message with a document$/, () => {
     const content = {
         subject: '2',
@@ -27,4 +23,8 @@ Then(/^the system shows a successful message$/, () => {
     expect(contactPage.successMessage).toHaveText(
         systemMessages.FEEDBACK_MESSAGE_SENT,
     );
+});
+
+Then(/^the system shows a customer service label$/, () => {
+    expect(contactPage.heading).toHaveText(systemLabels.CUSTOMER_SERVICE);
 });
