@@ -15,7 +15,7 @@
     "cucumber:unused:step": "npx ./dist/src/test/e2e/config/CucumberStepManager.js",
     "report:generate": "npx allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
     "report:open": "npx allure open test-report/allure-report",
-    "tests:e2e": "wdio ./dist/wdio.conf.js"
+    "tests:e2e": "rm -rf test-report && wdio ./dist/wdio.conf.js"
   },
   "config": {
     "commitizen": {
