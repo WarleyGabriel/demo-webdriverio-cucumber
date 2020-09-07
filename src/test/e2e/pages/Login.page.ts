@@ -27,12 +27,14 @@ class LoginPage {
         return $('.info-account');
     }
 
-    login(user: { login: string; password: string }) {
+    login(email: string, password: string) {
         if (this.buttonLogin.isExisting()) {
             this.buttonLogin.click();
+
             this.inputEmail.waitForEnabled();
-            this.inputEmail.setValue(user.login);
-            this.inputPassword.setValue(user.password);
+            this.inputEmail.setValue(email);
+            this.inputPassword.setValue(password);
+
             this.buttonSignIn.click();
             this.welcomeMessage.waitForExist();
         }

@@ -6,12 +6,9 @@ Given(/^I'm on the login page$/, () => {
     loginPage.open();
 });
 
-When(/^I log in with a default user$/, () => {
-    const user = {
-        login: 'automationtests@testing.com',
-        password: '12345678',
-    };
-    loginPage.login(user);
+When(/^I log in with a user:$/, (data) => {
+    const [user] = data.hashes();
+    loginPage.login(user.email, user.password);
 });
 
 Then(/^show a welcome message on the site$/, () => {
