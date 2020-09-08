@@ -49,7 +49,7 @@ npm run report:open
 
 You can see [Timeline report](https://github.com/QualityOps/wdio-timeline-reporter) in `./test-report/timeline/timeline-report.html`
 
-## Prettier
+## Prettier and Eslint
 
 Run to format the code:
 

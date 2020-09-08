@@ -22,11 +22,7 @@ const commandOptions = {
 
 exec(command, commandOptions, processCommandOutput);
 
-function processCommandOutput(
-    _err: ExecException | null,
-    stdout: string,
-    _stderr: string,
-) {
+function processCommandOutput(_err: ExecException | null, stdout: string) {
     const steps = JSON.parse(stdout);
     const unusedSteps = getUnusedSteps(steps);
     printUnusedStepInfo(unusedSteps);
