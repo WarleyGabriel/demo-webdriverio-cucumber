@@ -6,6 +6,20 @@
 **Demo WebDriverIO** is a demonstration project of integration tests. In this project the user sends a message to the customer service on [Automation Practice](http://automationpractice.com).  
 These tests are developed in TypeScript with [WebDriverIO V6](http://webdriver.io/) and [Cucumber](https://cucumber.io/)
 
+## Features
+
+-   TypeScript
+-   [Expect-webdriverio](https://github.com/webdriverio/expect-webdriverio)
+-   Page Object Pattern
+-   [Gherkin lint](https://github.com/vsiakka/gherkin-lint)
+-   Scripts to check undefined and unused steps on step/feature files
+-   [Commit lint](https://github.com/conventional-changelog/commitlint) and [Commitizen](https://github.com/commitizen/cz-cli#making-your-repo-commitizen-friendly)
+-   ESlint
+-   Prettier
+-   Husky
+-   Github Actions example
+-   Allure report (screenshots on failure) and Timeline report
+
 ## Requirements
 
 -   node >= 12.18.x - [how to install Node](https://nodejs.org/en/download/)
