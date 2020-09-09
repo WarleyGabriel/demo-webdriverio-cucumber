@@ -63,4 +63,14 @@ exports.config = {
     before() {
         browser.setWindowSize(1280, 720);
     },
+    afterStep(
+        uri: undefined,
+        feature: undefined,
+        scenario: { error: boolean },
+    ) {
+        console.log(scenario);
+        if (scenario.error) {
+            browser.takeScreenshot();
+        }
+    },
 };
