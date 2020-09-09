@@ -8,6 +8,7 @@
   "author": "Warley Gabriel da Paixão",
   "scripts": {
     "build": "rm -rf ./dist && npx tsc && cp -R ./src/test/e2e/features ./dist/src/test/e2e",
+    "watch": "npx tsc -w",
     "code:format": "eslint . --ext .ts && prettier --check \"src/**/*.ts*\" --write",
     "code:gherkin": "npx gherkin-lint -c .gherkin-lintrc.json src/test/e2e/features",
     "commit": "cz",
