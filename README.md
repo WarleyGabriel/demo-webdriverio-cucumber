@@ -33,6 +33,12 @@ Install the dependencies:
 npm install
 ```
 
+Compile TypeScript:
+
+```bash
+npm run build
+```
+
 Run e2e tests:
 
 ```bash
