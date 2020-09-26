@@ -68,7 +68,6 @@ exports.config = {
         feature: undefined,
         scenario: { error: boolean },
     ) {
-        console.log(scenario);
         if (scenario.error) {
             browser.takeScreenshot();
         }

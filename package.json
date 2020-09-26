@@ -7,7 +7,7 @@
   },
   "author": "Warley Gabriel da Paixão",
   "scripts": {
-    "build": "rm -rf ./dist && npx tsc && cp -R ./src/test/e2e/features ./dist/src/test/e2e",
+    "build": "npx del ./dist && npx tsc && npx copyfiles -f ./src/test/e2e/features/** ./dist/src/test/e2e/features/",
     "watch": "npx tsc -w",
     "code:format": "eslint . --ext .ts && prettier --check \"src/**/*.ts*\" --write",
     "code:gherkin": "npx gherkin-lint -c .gherkin-lintrc.json src/test/e2e/features",
@@ -16,7 +16,7 @@
     "cucumber:unused:step": "npx ./dist/src/test/e2e/config/CucumberStepManager.js",
     "report:generate": "npx allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
     "report:open": "npx allure open test-report/allure-report",
-    "tests:e2e": "rm -rf test-report && wdio ./dist/wdio.conf.js"
+    "tests:e2e": "npx del test-report && wdio ./dist/wdio.conf.js"
   },
   "config": {
     "commitizen": {
@@ -32,7 +32,9 @@
     "@wdio/sync": "^6.4.6",
     "allure-commandline": "^2.13.0",
     "chromedriver": "^85.0.0",
+    "copyfiles": "^2.3.0",
     "cucumber": "^6.0.5",
+    "del-cli": "^3.0.1",
     "expect": "^26.4.2",
     "expect-webdriverio": "^1.3.1",
     "fibers": "^5.0.0",
