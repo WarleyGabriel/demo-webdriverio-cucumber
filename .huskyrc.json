@@ -1,6 +1,0 @@
-{
-  "hooks": {
-    "pre-commit": "npm run code:format && npm run code:gherkin && npm run build && npm run cucumber:undefined:step && npm run cucumber:unused:step",
-    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-  }
-}
