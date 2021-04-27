@@ -5,7 +5,7 @@ exports.config = {
     hostname: 'localhost',
     port: 4444,
     path: '/wd/hub',
-    specs: ['./dist/**/*.feature'],
+    specs: ['./src/**/*.feature'],
     maxInstances: 1,
 
     capabilities: [
@@ -39,8 +39,7 @@ exports.config = {
     ],
 
     cucumberOpts: {
-        requireModule: [() => {}],
-        require: ['./dist/**/*.steps.js'],
+        require: ['./src/**/*.steps.ts'],
         backtrace: false,
         compiler: [],
         dryRun: false,

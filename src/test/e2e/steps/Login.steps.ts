@@ -1,4 +1,4 @@
-import { Given, When, Then } from "@cucumber/cucumber";
+import { Given, When, Then } from '@cucumber/cucumber';
 import { loginPage } from '../pages/Login.page';
 import * as systemMessages from '../constants/SystemMessages.constant';
 

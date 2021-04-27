@@ -1,4 +1,4 @@
-import { When, Then } from "@cucumber/cucumber";
+import { When, Then } from '@cucumber/cucumber';
 import { contactPage } from '../pages/Contact.page';
 import * as systemMessages from '../constants/SystemMessages.constant';
 import * as systemLabels from '../constants/SystemLabels.constant';

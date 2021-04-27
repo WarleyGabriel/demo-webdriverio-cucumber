@@ -16,7 +16,7 @@
     "cucumber:unused:step": "npx ./dist/src/test/e2e/config/CucumberStepManager.js",
     "report:generate": "npx allure generate --clean ./test-report/allure-result/ -o ./test-report/allure-report",
     "report:open": "npx allure open test-report/allure-report",
-    "tests:e2e": "npx del test-report && wdio ./dist/wdio.conf.js"
+    "tests:e2e": "npx del test-report && wdio ./wdio.conf.ts"
   },
   "config": {
     "commitizen": {
@@ -32,7 +32,7 @@
     "@wdio/spec-reporter": "^7.5.2",
     "@wdio/sync": "^7.5.2",
     "allure-commandline": "^2.13.8",
-    "chromedriver": "^87.0.5",
+    "chromedriver": "^90.0.0",
     "copyfiles": "^2.4.1",
     "cucumber": "^6.0.5",
     "del-cli": "^3.0.1",
