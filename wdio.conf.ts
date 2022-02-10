@@ -5,14 +5,16 @@ exports.config = {
     hostname: 'localhost',
     port: 4444,
     path: '/wd/hub',
-    specs: ['./dist/**/*.feature'],
+    specs: ['./src/**/*.feature'],
     maxInstances: 1,
+
     capabilities: [
         {
             maxInstances: 1,
             browserName: 'chrome',
         },
     ],
+
     logLevel: 'trace',
     outputDir: './test-report/output',
     bail: 0,
@@ -21,6 +23,7 @@ exports.config = {
     connectionRetryTimeout: 90000,
     connectionRetryCount: 3,
     framework: 'cucumber',
+
     reporters: [
         'spec',
         [
@@ -34,13 +37,9 @@ exports.config = {
         ],
         ['timeline', { outputDir: './test-report/timeline' }],
     ],
+
     cucumberOpts: {
-        requireModule: [
-            () => {
-                require('ts-node').register({ transpileOnly: true });
-            },
-        ],
-        require: ['./dist/**/*.steps.js'],
+        require: ['./src/**/*.steps.ts'],
         backtrace: false,
         compiler: [],
         dryRun: false,
@@ -54,22 +53,34 @@ exports.config = {
         tags: [],
         timeout: 300000,
         ignoreUndefinedDefinitions: false,
-        tagExpression: 'not @skip',
+        tagExpression: 'not @skip'
     },
+
+    autoCompileOpts: {
+        autoCompile: true,
+
+        tsNodeOpts: {
+            transpileOnly: true
+        }
+    },
+
     services: ['chromedriver', [TimelineService]],
+
     beforeSession() {
         require('expect-webdriverio').setOptions({ wait: 5000 });
     },
+
     before() {
         browser.setWindowSize(1280, 720);
     },
+
     afterStep(
-        uri: undefined,
-        feature: undefined,
-        scenario: { error: boolean },
+        uri: any,
+        feature: any,
+        scenario: any
     ) {
         if (scenario.error) {
             browser.takeScreenshot();
         }
-    },
+    }
 };
