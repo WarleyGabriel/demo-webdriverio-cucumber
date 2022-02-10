@@ -26,7 +26,6 @@
   "dependencies": {
     "@wdio/allure-reporter": "^7.5.2",
     "@wdio/cli": "^7.5.2",
-    "@wdio/codemod": "^0.6.0",
     "@wdio/cucumber-framework": "^7.5.2",
     "@wdio/local-runner": "^7.5.2",
     "@wdio/spec-reporter": "^7.5.2",
